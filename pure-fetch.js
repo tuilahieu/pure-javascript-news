@@ -25,6 +25,7 @@ fetch(endpoint)
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+    search.value = '';
     let userSearch = search.value;
     const posts = document.querySelectorAll('.post');
     let filteredPost = [...posts].filter((post) => {
