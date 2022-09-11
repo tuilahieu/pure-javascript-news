@@ -25,7 +25,6 @@ fetch(endpoint)
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    search.value = '';
     let userSearch = search.value;
     const posts = document.querySelectorAll('.post');
     let filteredPost = [...posts].filter((post) => {
@@ -37,4 +36,5 @@ fetch(endpoint)
     statusDetail[1].textContent = filteredPost.length;
     statusDetail[2].textContent = posts.length;
     status.style.display = 'block';
+    search.value = '';
   })
